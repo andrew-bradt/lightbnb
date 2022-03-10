@@ -92,7 +92,7 @@ exports.getAllReservations = getAllReservations;
 const getAllProperties = function(options, limit = 10) {
   const queryParams = [];
   let queryString = `
-    SELECT properties.*, AVG(rating) AS avg_rating
+    SELECT properties.*, AVG(rating) AS average_rating
     FROM properties
     LEFT OUTER JOIN property_reviews ON property_reviews.property_id = properties.id 
   `;
